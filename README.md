@@ -4,7 +4,7 @@ A four-page Power BI report on the Olist Brazilian e-commerce dataset, built for
 
 The report sits on the star-schema mart built in SQL in [olist-ecommerce-analysis](https://github.com/EzzEldienMohsen/olist-ecommerce-analysis). Every headline number was checked against a SQL query written to the same definition.
 
-![Overview](images/01-overview.png)
+![Overview](01-overview.png)
 
 ## Key findings (January–August 2018 vs the same months of 2017)
 
@@ -28,7 +28,7 @@ A year and date slicer is synced across all pages. The report opens on **January
 
 | Customer & delivery | Sellers | Seller detail |
 |---|---|---|
-| ![](images/02-customer-delivery.png) | ![](images/03-sellers.png) | ![](images/04-seller-detail.png) |
+| ![](02-customer-delivery.png) | ![](03-sellers.png) | ![](04-seller-detail.png) |
 
 ## Data model
 
@@ -40,7 +40,7 @@ A year and date slicer is synced across all pages. The report opens on **January
 | `dim_customers`, `dim_products`, `dim_sellers` | one customer snapshot / product / seller | |
 | `dim_date` | one day | marked date table; a second copy plays the delivery-date role |
 
-`review_table` is a view added for this report: see [`sql/review_table.sql`](sql/review_table.sql).
+`review_table` is a view added for this report: see [`review_table.sql`](review_table.sql).
 
 ## Definitions
 
@@ -71,8 +71,8 @@ Power BI Desktop (Power Query, DAX: CALCULATE, time intelligence, RANKX, FILTER 
 ```
 power_bi_olist_project.pbix   the report
 power_bi_olist_project.pdf    PDF export of all pages
-images/                       page screenshots
-sql/review_table.sql          view added to the mart for this report
+01–04-*.png                   page screenshots
+review_table.sql              view added to the mart for this report
 ```
 
 Data: [Olist Brazilian E-Commerce Public Dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) (Kaggle).
